@@ -4,7 +4,6 @@ import 'package:thunder_chat/Screens/Login screeen.dart';
 import 'package:thunder_chat/Screens/Registration_Screen.dart';
 import 'package:thunder_chat/Screens/Chat Screen.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 
 // void main() => runApp(FlashChat());
 Future<void> main() async {

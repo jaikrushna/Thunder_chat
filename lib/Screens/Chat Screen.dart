@@ -1,11 +1,7 @@
-// import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:thunder_chat/Constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:thunder_chat/Screens/Registration_Screen.dart';
-import 'package:provider/provider.dart';
 
 late User loggedinuser;
 
@@ -21,7 +17,6 @@ class _ChatScreenState extends State<ChatScreen> {
   final _auth = FirebaseAuth.instance;
   final _firestone = FirebaseFirestore.instance;
   var named = new Map();
-  // late Map<String, String> named = {'': 'unknown'};
 
   late String idi;
   @override
@@ -86,7 +81,6 @@ class _ChatScreenState extends State<ChatScreen> {
                     _firestone.collection('user').snapshots().listen((event) {
                       event.docs.forEach((element) {
                         named[element['email']] = element['name'];
-                        // named[element['name']] = element['URL'];
                       });
                     });
                     final messages = snapshot.data!.docs.reversed;
@@ -96,13 +90,10 @@ class _ChatScreenState extends State<ChatScreen> {
                       final email = message.get('email');
                       final name = named[email];
                       final mmail = message.get('id');
-                      // final url = named[name]; //madhe theme
-                      // final sender = loggedinuser;
                       final messagewidget = messagebubble(
                         messaged: messaged,
                         name: name,
                         isme: mmail == idi,
-                        // Url: url,
                       );
                       Messagelist.add(messagewidget);
                     }
@@ -158,20 +149,15 @@ class messagebubble extends StatelessWidget {
     required this.messaged,
     required this.name,
     required this.isme,
-    // required this.Url,
   });
   var messaged;
   var name;
   bool isme;
-  // String Url;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(10.0),
-      child:
-          // Stack(
-          //   children: [
-          Column(
+      child: Column(
         crossAxisAlignment:
             isme ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
@@ -211,16 +197,6 @@ class messagebubble extends StatelessWidget {
           ),
         ],
       ),
-      // Positioned(
-      //   top: 0,
-      //   left: isme ? null : 140,
-      //   right: isme ? 140 : null,
-      //   child: CircleAvatar(
-      //     backgroundImage: NetworkImage(Url),
-      //   ),
-      // )
-      //   ],
-      // ),
     );
   }
 }
