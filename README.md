@@ -8,14 +8,14 @@ A simple group messaging application which uses firebase messaging, firebase aut
 ## Animations
 
 #### 1]Forward_Animation:
-(https://user-images.githubusercontent.com/86294906/218263353-6c75e734-8eef-4adc-8ef4-56920a4ea96b.mp4)
+https://user-images.githubusercontent.com/86294906/218263353-6c75e734-8eef-4adc-8ef4-56920a4ea96b.mp4
 
 
 
 
 ##### 2]Hero_Transition:
 ###### Transition from one screen to another
-(https://user-images.githubusercontent.com/86294906/218263381-7a073703-5f06-45c7-9e55-0935c1670bef.mp4)
+https://user-images.githubusercontent.com/86294906/218263381-7a073703-5f06-45c7-9e55-0935c1670bef.mp4
 
 
 
