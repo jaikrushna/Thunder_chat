@@ -43,3 +43,27 @@ https://user-images.githubusercontent.com/86294906/218263381-7a073703-5f06-45c7-
 #### Chat Screen:
 ###### This is the Chat Screen which displays the message fetched from firebase database from different users along with their names above the bubble and a text box to to enter the message to send and send it
 ![App Screenshot](https://user-images.githubusercontent.com/86294906/218263113-d3b9858b-64fb-43dc-8a7e-f511db661804.jpg)
+
+
+
+
+## Libraries used and their usuage:
+
+
+#### 1]firebase_core  &  firebase_auth: 
+Used for Email Authentication
+
+#### 2]Image_Picker:
+Used to fetch the image for profile picture from users local storage or camera device
+
+#### 3]animated_text_kit:
+For the animations and the Hero transactions used in the application
+
+#### 4]firebase_storage:
+Used to store the users information along message send by user
+
+#### 5]Cupertino Items:
+To used some defined icons like camera
+
+#### 6]Provider:
+Provider package is used for State Management Purpose
